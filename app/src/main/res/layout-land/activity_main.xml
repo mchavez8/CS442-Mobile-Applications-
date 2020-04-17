@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/kiloConvert"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="kiloConvert"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/mileVal"
+        android:layout_width="148dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="336dp"
+        android:layout_marginTop="36dp"
+        android:text="Miles Value:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/userInput"
+        android:layout_width="178dp"
+        android:layout_height="38dp"
+        android:background="@android:color/darker_gray"
+        android:ems="10"
+        android:inputType="numberSigned|numberDecimal"
+        android:onClick="kiloConvert"
+        app:layout_constraintBaseline_toBaselineOf="@+id/mileVal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.575"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        tools:text="123" />
+
+    <Button
+        android:id="@+id/convert"
+        android:layout_width="333dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="28dp"
+        android:onClick="convert_methods"
+        android:text="convert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.987"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userInput" />
+
+    <TextView
+        android:id="@+id/kiloVal"
+        android:layout_width="152dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="324dp"
+        android:layout_marginTop="164dp"
+        android:text="Kilometers Value: "
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="135dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="16dp"
+        android:text="Conversion:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="205dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="128dp"
+        android:text="Conversion History:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="276dp"
+        android:layout_height="43dp"
+        android:onClick="clear_Records"
+        android:text="clear "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/historyText"
+        app:layout_constraintVertical_bias="0.125" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="247dp" />
+
+    <RadioGroup
+        android:id="@+id/conversion_Group"
+        android:layout_width="228dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="44dp"
+        android:checkedButton="@id/miles_convert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.031"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/miles_convert"
+            android:layout_width="174dp"
+            android:layout_height="30dp"
+            android:onClick="convert_methods"
+            android:text="miles to kilometers" />
+
+        <RadioButton
+            android:id="@+id/kilo_convert"
+            android:layout_width="176dp"
+            android:layout_height="30dp"
+            android:onClick="convert_methods"
+            android:text="kilometers to miles" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/resultline"
+        android:layout_width="wrap_content"
+        android:layout_height="39dp"
+        android:background="@android:color/darker_gray"
+        android:ems="10"
+        android:inputType="numberSigned|numberDecimal"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/kiloVal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.848"
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+    <TextView
+        android:id="@+id/historyText"
+        android:layout_width="282dp"
+        android:layout_height="124dp"
+        android:layout_marginTop="156dp"
+        android:background="@android:color/darker_gray"
+        android:ellipsize="none"
+        android:ems="10"
+        android:gravity="top|start"
+        android:inputType="textMultiLine"
+        android:lines="5"
+        android:maxLines="100"
+        android:scrollbars="vertical"
+        android:scrollHorizontally="false"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
